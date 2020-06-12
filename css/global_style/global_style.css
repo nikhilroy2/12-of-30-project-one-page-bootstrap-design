@@ -1,0 +1,53 @@
+.font_oswald {
+  font-family: 'Oswald', sans-serif;
+}
+
+.font_default_size {
+  font-size: 16px;
+}
+
+.font_small {
+  font-size: 15px;
+}
+
+.font_apply {
+  position: relative;
+}
+
+.font_apply::before {
+  position: absolute;
+  content: '';
+  bottom: -13px;
+  width: 49px;
+  height: 4px;
+  background: var(--text_1);
+}
+
+.text_1 {
+  color: #13517B;
+}
+
+.bg_1 {
+  background: #13517B;
+}
+
+.btn_more {
+  color: #fff;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 2px 7px;
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.btn_more:hover {
+  color: #fff;
+}
+
+.border_bottom_whiteGray {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+/*# sourceMappingURL=global_style.css.map */

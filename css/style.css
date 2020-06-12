@@ -1,0 +1,223 @@
+.font_oswald {
+  font-family: 'Oswald', sans-serif;
+}
+
+.font_default_size {
+  font-size: 16px;
+}
+
+.font_small {
+  font-size: 15px;
+}
+
+.font_apply {
+  position: relative;
+}
+
+.font_apply::before {
+  position: absolute;
+  content: '';
+  bottom: -13px;
+  width: 49px;
+  height: 4px;
+  background: var(--text_1);
+}
+
+.text_1 {
+  color: #13517B;
+}
+
+.bg_1 {
+  background: #13517B;
+}
+
+.btn_more {
+  color: #fff;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 2px 7px;
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.btn_more:hover {
+  color: #fff;
+}
+
+.border_bottom_whiteGray {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  font-size: 20px;
+  --text_1: #13517B;
+  --bg_whiteGray: #ECECEC;
+  --facebook: #3A589D;
+  --linkedin: #0072B7 ;
+  --twitter: #2478BA;
+  --youtube: #C33223 ;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #777;
+}
+
+.logo {
+  max-width: 300px;
+}
+
+.nav-link {
+  font-size: .8rem;
+  color: rgba(102, 102, 102, 0.85) !important;
+  -webkit-transition: .2s;
+  transition: .2s;
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  color: rgba(17, 17, 17, 0.85) !important;
+  text-decoration: underline;
+}
+
+.section_1 {
+  background: url("../img/white-house.jpg");
+  height: 100vh;
+}
+
+.section_1 .container-lg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section_3 .card_wrapper .img_head {
+  height: 200px;
+  display: block;
+}
+
+.section_3 .card_wrapper .img_head img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section_3 .card_wrapper .card_name {
+  color: #555 !important;
+  position: relative;
+  font-size: 18px;
+}
+
+.section_3 .card_wrapper .card_name::after {
+  content: '';
+  background: rgba(85, 85, 85, 0.247);
+  width: 30px;
+  position: absolute;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.section_4 {
+  background: var(--bg_whiteGray);
+}
+
+footer {
+  background: var(--text_1);
+}
+
+footer .social_list a {
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 50%;
+  border: 2px solid rgba(238, 238, 238, 0.295);
+  -webkit-transition: .2s;
+  transition: .2s;
+  position: relative;
+}
+
+footer .social_list a::after, footer .social_list a::before {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+footer .social_list a::before {
+  content: "Follow on " attr(data-social) "";
+  position: absolute;
+  top: -34px;
+  background: #000;
+  color: #fff;
+  border-radius: 10px;
+  padding: 2px 0;
+  text-align: center;
+  width: 150px;
+  display: block;
+  font-size: 15px;
+  left: -120%;
+}
+
+footer .social_list a::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  border: 10px solid transparent;
+  border-top-color: #000;
+}
+
+footer .social_list a:hover {
+  border: none;
+  color: #fff !important;
+}
+
+footer .social_list a:hover::after, footer .social_list a:hover::before {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+footer .social_list a[data-social="Facebook"]:hover {
+  background: var(--facebook);
+}
+
+footer .social_list a[data-social="Linkedin"]:hover {
+  background: var(--linkedin);
+}
+
+footer .social_list a[data-social="Twitter"]:hover {
+  background: var(--twitter);
+}
+
+footer .social_list a[data-social="Youtube"]:hover {
+  background: var(--youtube);
+}
+/*# sourceMappingURL=style.css.map */

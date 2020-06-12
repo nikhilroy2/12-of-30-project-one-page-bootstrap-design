@@ -1,0 +1,161 @@
+@import './global_style/global_style';
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+   // font-family: 'Oswald', sans-serif;
+}
+:root{
+    font-size: 20px;
+    --text_1: #13517B;
+    --bg_whiteGray: #ECECEC;
+    --facebook: #3A589D;
+    --linkedin: #0072B7 ;
+    --twitter: #2478BA;
+    --youtube: #C33223 ;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    color: #777;
+}
+
+// ...... Mixin .......
+@mixin j-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// ...... Mixin .......End
+
+// ...... Header .......
+.logo{
+    max-width: 300px;
+}
+.nav-link{
+    font-size: .8rem;
+    color: rgba(102,102,102,0.85)!important;
+    transition: .2s;
+    font-weight: 700;
+    &:hover{
+        color: rgba(17,17,17,0.85)!important;
+        text-decoration: underline;
+    }
+}
+// ...... Header .......End
+
+// ....... Section 1 ......
+.section_1{
+    background: url('../img/white-house.jpg');
+    height: 100vh;
+    .container-lg{
+        @include j-center;
+    }
+
+}
+// ....... Section 1 ......End
+
+
+// ........ Section 3 .......
+.section_3{
+    .card_wrapper{
+        .img_head{
+            height: 200px;
+            display: block;
+            img{
+                object-fit: cover;
+            }
+        }
+        .card_name{
+            color: #555!important;
+            position: relative;
+            font-size: 18px;
+            &::after{
+                content: '';
+                background: rgba(85, 85, 85, 0.247);
+                width: 30px;
+                position: absolute;
+                height: 2px;
+                bottom: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+// ........ Section 3 .......End
+// ........ Section 4 .......
+.section_4{
+    background: var(--bg_whiteGray);
+}
+// ........ Section 4 .......End
+
+
+// ...... Footer ............
+footer{
+    background: var(--text_1);
+    .social_list{
+        a{
+            width: 35px;
+            height: 35px;
+            @include j-center;
+            display: inline-flex;
+            border-radius: 50%;
+            border: 2px solid rgba(238, 238, 238, 0.295);
+            transition: .2s;
+            position: relative;
+            &::after,&::before{
+                opacity: 0;
+                pointer-events: none;
+                transition: .5s;
+            }
+            &::before{
+                content: 'Follow on 'attr(data-social)'';
+                position: absolute;
+                top: -34px;
+                background: #000;
+                color: #fff;
+                border-radius: 10px;
+                padding: 2px 0;
+                text-align: center;
+                width: 150px;
+                display: block;
+                font-size: 15px;
+                left: -120%;
+                
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                top: -10px;
+                border: 10px solid transparent;
+                border-top-color: #000;
+
+            }
+            &:hover{
+                border: none;
+                color: #fff!important;
+                &::after,&::before{
+                    opacity: 1;
+                    pointer-events: visible;
+                }
+               
+            }
+           
+            &[data-social="Facebook"]:hover{
+                background: var(--facebook);
+            }
+            &[data-social="Linkedin"]:hover{
+                background: var(--linkedin);
+            }
+            &[data-social="Twitter"]:hover{
+                background: var(--twitter);
+            }
+            &[data-social="Youtube"]:hover{
+                background: var(--youtube);
+            }
+        }
+        
+    }
+}
+// ...... Footer ............End
